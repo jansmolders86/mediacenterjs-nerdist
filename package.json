@@ -1,0 +1,18 @@
+{
+	"name": "mediacenterjs-nerdist",
+	"description": "A Nerdist app for mediacenterjs",
+	"homepage": "http://www.mediacenterjs.com",
+	"author": {
+		"name": "Jan Smolders",
+		"email": "jansmolders86@gmail.com"
+	},
+	"version": "0.0.1",
+	"peerDependencies": {
+		"mediacenterjs": "*"
+	},
+	"keywords": [
+		"mediacenterjs",
+		"Nerdist",
+		"podcast"
+	]
+}
