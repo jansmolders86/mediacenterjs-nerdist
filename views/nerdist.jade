@@ -24,6 +24,8 @@ html(lang="en")
 			$(function(){
 				$('body').mcjs();
 				
+				$('p > a').remove();
+				
 				$('.link').click(function(e) {
 					e.preventDefault();	
 					
@@ -35,6 +37,8 @@ html(lang="en")
 						myPlayer.src(link);
 						myPlayer.play();
 					});
+					
+					
 				});
 			});
 	body
