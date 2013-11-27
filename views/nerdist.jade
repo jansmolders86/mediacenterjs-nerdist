@@ -11,8 +11,8 @@ html(lang="en")
 		
 		title The nerdist
 		
-		link(href="http://vjs.zencdn.net/4.0/video-js.css", rel="stylesheet")
-		script(src="http://vjs.zencdn.net/4.0/video.js")
+		link(href="http://vjs.zencdn.net/4.3/video-js.css", rel="stylesheet")
+		script(src="http://vjs.zencdn.net/4.3/video.js")
 		style.
 			.vjs-play-progress, .vjs-volume-level { background-color: #d96800!important; }
 			.vjs-control-bar, .vjs-big-play-button { background: rgba(171,171,171,0.7)!important; }
@@ -24,7 +24,9 @@ html(lang="en")
 			$(function(){
 				$('body').mcjs();
 				
-				$('p > a').remove();
+				$('li.boxed').each(function(){
+                                    $(this).find('p > a').remove();
+                                 });
 				
 				$('.link').click(function(e) {
 					e.preventDefault();	
