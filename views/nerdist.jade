@@ -5,13 +5,10 @@ html(lang="en")
 		link(rel='stylesheet', href='/core/css/style.css')
 		script(src="/core/js/jquery-1.8.2.min.js")
 		script(src="/core/js/jquery.mcjs.core.js")
-		
-		// App specific
+			// App specific
 		link(rel='stylesheet', href='/mediacenterjs-nerdist/public/css/style.css')
-		
-		title The nerdist
-		
-		link(href="http://vjs.zencdn.net/4.3/video-js.css", rel="stylesheet")
+			title The nerdist
+			link(href="http://vjs.zencdn.net/4.3/video-js.css", rel="stylesheet")
 		script(src="http://vjs.zencdn.net/4.3/video.js")
 		style.
 			.vjs-play-progress, .vjs-volume-level { background-color: #d96800!important; }
@@ -19,33 +16,29 @@ html(lang="en")
 			.vjs-slider { background: rgba(171,171,171,0.2333333333333333)!important; }
 			.vjs-fade-out { opacity: 1 !important; visibility: visible !important; }
 			.vjs-fullscreen-control{visibility:hidden!important;}
-		
-		script.
+			
+			script.
 			$(function(){
 				$('body').mcjs();
 				
 				$('li.boxed').each(function(){
-                                    $(this).find('p > a').remove();
-                                 });
+					$(this).find('p > a').remove();
+				});
 				
 				$('.link').click(function(e) {
-					e.preventDefault();	
-					
-					var link = $(this).attr('href')
-					
-					videojs("player").ready(function(){
-						var myPlayer = this;
-						$('#player').css('bottom','0');
-						myPlayer.src(link);
-						myPlayer.play();
-					});
-					
-					
+                        e.preventDefault();	
+						var link = $(this).attr('href')
+						videojs("player").ready(function(){
+                            var myPlayer = this;
+                            $('#player').css('bottom','0');
+                            myPlayer.src(link);
+                            myPlayer.play();
+                        });
 				});
 			});
 	body
 		#header
-			a.backlink(href="/") 
+			a.backlink(href="/")
 				img(src="/core/icons/back.png")
 			h1 Nerdist	
 		#wrapper
