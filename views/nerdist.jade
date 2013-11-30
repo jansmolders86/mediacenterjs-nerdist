@@ -26,14 +26,14 @@ html(lang="en")
 				});
 				
 				$('.link').click(function(e) {
-                        e.preventDefault();	
-						var link = $(this).attr('href')
-						videojs("player").ready(function(){
-                            var myPlayer = this;
-                            $('#player').css('bottom','0');
-                            myPlayer.src(link);
-                            myPlayer.play();
-                        });
+					e.preventDefault();	
+					var link = $(this).attr('href')
+					videojs("player").ready(function(){
+						var myPlayer = this;
+						$('#player').css('bottom','0');
+						myPlayer.src(link);
+						myPlayer.play();
+					});
 				});
 			});
 	body
