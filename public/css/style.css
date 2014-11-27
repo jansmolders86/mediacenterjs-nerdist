@@ -1,4 +1,4 @@
-body{ background:url(img/bg.png)repeat; }
+body{ background:url(img/bg.png)repeat; height: auto;}
 li{
 	list-style:none; 
 	margin:0 0 30px 0; 
@@ -13,9 +13,20 @@ li{
 #header{height:100px; overflow:hidden; background:#fff;}
 #header h1{margin: 14px 0 0 60px;}
 
-#wrapper h1{ color:#000; font-size:16px; margin:0; padding:0;}
-#wrapper p{ color:#444; font-size:14px; margin:0 0 20px 0; padding:0;}
-#wrapper a{ 
+.boxed h1{ color:#000; font-size:30px; margin:0; padding:0;}
+.boxed p,
+.boxed p > a{ color:#444; font-size:14px; margin:0 0 20px 0; padding:0;}
+.boxed img{display:none;}
+
+#player{
+	position:fixed;
+	bottom:-35px;
+	left:0;
+}
+
+li:first-child{margin-top:50px;}
+
+.boxed  > a{ 
 	color:#fff; 
 	font-size:16px; 
 	padding:0;
@@ -27,12 +38,4 @@ li{
 	margin-left:-1px;
 	display:inline-block;
 	text-transform:uppercase;
-}
-
-#wrapper img{display:none;}
-
-#player{
-	position:fixed;
-	bottom:-35px;
-	left:0;
 }
